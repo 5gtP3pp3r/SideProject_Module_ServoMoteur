@@ -7,7 +7,7 @@ ServoMotor::ServoMotor(uint8_t p_pin) : m_pin(p_pin) {
 
 void ServoMotor::testLoop() {
         for(uint8_t i = 0; i < 175; ++i) {
-            delay(10);
+            delay(10);                      // Test poche avec des delay(), mais hey... c'est juste pour tester!
             this->m_servo.write(i);
             Serial.println(String(i) + "°");
         }

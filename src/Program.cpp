@@ -5,7 +5,7 @@ Program::Program() : m_servo(nullptr) {
 }
 
 void Program::testServoMotorPos() {
-    delay(500);
+    delay(500);                         // Test poche avec des delay(), mais hey... c'est juste pour tester!
     this->m_servo->RotateTo45();
     delay(250);
     this->m_servo->RotateTo90();
