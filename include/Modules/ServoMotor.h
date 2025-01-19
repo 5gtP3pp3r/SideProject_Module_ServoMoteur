@@ -15,6 +15,7 @@ private:
     
 public:
     ServoMotor(uint8_t p_pin);
+    void testLoop();
     void RotateTo45();
     void RotateTo90();
     void RotateTo180();

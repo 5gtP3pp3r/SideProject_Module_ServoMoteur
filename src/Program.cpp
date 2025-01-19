@@ -4,22 +4,26 @@ Program::Program() : m_servo(nullptr) {
     m_servo = new ServoMotor(13);
 }
 
-void Program::testServoMotor() {
+void Program::testServoMotorPos() {
     delay(500);
-    m_servo->RotateTo45();
+    this->m_servo->RotateTo45();
     delay(250);
-    m_servo->RotateTo90();
+    this->m_servo->RotateTo90();
     delay(250);
-    m_servo->RotateTo180();
+    this->m_servo->RotateTo180();
     delay(250);
-    m_servo->RotateToStartPosition();
+    this->m_servo->RotateToStartPosition();
     delay(500);
-    m_servo->RotateTo180();
+    this->m_servo->RotateTo180();
     delay(500);
-    m_servo->RotateToStartPosition();
-    
+    this->m_servo->RotateToStartPosition();
+    delay(500);
+}
+void Program::testServoLoop() {
+    this->m_servo->testLoop();
 }
 
 void Program::loop() {
-    testServoMotor();
+    testServoMotorPos();
+    testServoLoop();
 }

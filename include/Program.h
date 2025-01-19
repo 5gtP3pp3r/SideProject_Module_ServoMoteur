@@ -9,6 +9,7 @@ private:
     ServoMotor* m_servo;
 public:
     Program();
-    void testServoMotor();
+    void testServoMotorPos();
+    void testServoLoop();
     void loop();
 };
